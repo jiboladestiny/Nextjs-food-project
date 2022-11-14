@@ -1,0 +1,51 @@
+.containers {
+  padding: 5rem 0;
+}
+
+.titles {
+  text-align: center;
+  font-size: 30px;
+}
+
+.descs {
+  font-size: 18px;
+  color: #444;
+  text-align: center;
+}
+
+.wrappers {
+  /* width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; */
+}
+
+@media screen and (max-width: 480px) {
+  .titles {
+    text-align: center;
+  }
+
+  .descs {
+    width: 90%;
+    text-align: center;
+  }
+}
+
+
+.nav-pills .nav-item:not(:last-child) {
+  margin-right: 0.8rem;
+
+}
+.nav-pills .nav-link {
+  background: rgb(0, 0, 0, 0.4) !important ;
+  color: white !important;
+  padding: 0.4rem 1rem;
+    font-size: 16px;
+    border-radius: 0.3rem;
+}
+
+.nav-pills .nav-link.active {
+  background: black !important ;
+  color: white !important;
+}
