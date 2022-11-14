@@ -14,8 +14,11 @@ const PizzaCard = ({ pizza }) => {
           <div className="col-5">
             <div>
               <h1 className="pizza-title">{pizza.title}</h1>
-              <span className="pizza-price">${pizza.prices[0]}</span>
               <p className="pizza-desc">{pizza.desc}</p>
+              <span className="pizza-price">
+                <span> ${pizza.prices[0]}</span>{" "}
+                <i class="bx bx-plus-medical"></i>
+              </span>
             </div>
           </div>
         </div>

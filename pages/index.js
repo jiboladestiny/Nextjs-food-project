@@ -24,6 +24,7 @@ export default function Home({ pizzaList, admin }) {
         />
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'
         rel='stylesheet'/>
+        
       </Head>
       <Featured />
       

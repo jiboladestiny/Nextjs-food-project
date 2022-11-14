@@ -7,7 +7,7 @@
   border-radius: 2rem;
   padding: 1rem;
   cursor: pointer;
-  background-color: rgb(0, 0, 0,0.1);
+  background-color: rgb(0, 0, 0, 0.1);
   height: 100%;
   width: 100%;
 }
@@ -21,7 +21,13 @@
 .pizza-price {
   font-size: 18px;
   font-weight: bold;
-  color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pizza-price i {
+  font-size:25px;
 }
 
 .pizza-desc {
