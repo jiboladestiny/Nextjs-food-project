@@ -2,16 +2,20 @@ import PizzaCard from "./PizzaCard";
 import { useState } from "react";
 
 const PizzaList = ({ pizzaList }) => {
-  const tabs = ["All","International","local","Snack"];
+  const tabs = ["All", "International", "local", "Snack"];
   const [show, setShow] = useState(0);
-  
-    const tabses = tabs.map((number,i) => (
-      <button onClick={()=>{
-        console.log(i)
-      }} className="btn me-2 btn-success" key={number}>
-        <i className="bx bxs-star"></i> {number}
-      </button>
-    ));
+
+  const tabses = tabs.map((number, i) => (
+    <button
+      onClick={() => {
+        setShow(i);
+      }}
+      className={i === show ? "btn me-2 active" : "btn me-2"}
+      key={number}
+    >
+      <i className="bx bxs-star"></i> {number}
+    </button>
+  ));
   return (
     <div className="containers container">
       <div className="row justify-content-center mb-4">
@@ -26,13 +30,21 @@ const PizzaList = ({ pizzaList }) => {
       </div>
 
       <div className="food-wrapper">
-        <div className="tab-wrapper">{tabses}</div>
+        <div className="d-flex justify-content-md-center">
+          <div className="tab-wrapper">{tabses}</div>
+        </div>
 
-        <div className="tab-content-wrapper">
-          {show === 0 && <div className="tab-content">1</div>}
-          {show === 1 && <div className="tab-content">2</div>}
-          {show === 2 && <div className="tab-content">3</div>}
-          {show === 3 && <div className="tab-content">4</div>}
+        <div className="tab-content-wrapper container">
+          {show === 0 && (
+            <div className="tab-content">
+              <div className="wrappers row justify-content-center">
+                {pizzaList.map((pizza) => (
+                  <PizzaCard key={pizza._id} pizza={pizza} />
+                ))}
+              </div>
+            </div>
+          )}
+                          
         </div>
       </div>
     </div>

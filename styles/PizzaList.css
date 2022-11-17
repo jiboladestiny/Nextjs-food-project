@@ -13,36 +13,36 @@
   color: #444;
   text-align: center;
 }
-
-
-
-@media screen and (max-width: 576px) {
-  /* .food-tab {
-    overflow-x: scroll;
-    flex-wrap: nowrap !important;
-  }
-
-  .food-tab li {
-    min-width: 100px;
-  } */
-
-
-
-
-
-   .tab-wrapper{
-  overflow-x: scroll;
-   display: flex;
- }
-  .tab-wrapper button{
-   min-width:150px;
-   
- }
-
-  
+.tab-content-wrapper{
+  margin-top: 2.5rem;
 }
 
-.nav-pills .nav-item:not(:last-child) {
+.tab-wrapper button {
+  background: rgb(0, 0, 0, 0.4) !important ;
+  color: white !important;
+  padding: 0.4rem 1rem;
+  font-size: 16px;
+  border-radius: 0.3rem;
+}
+
+.tab-wrapper button.active {
+  background: black !important ;
+  color: white !important;
+}
+
+@media screen and (max-width: 576px) {
+
+
+  .tab-wrapper {
+    overflow-x: scroll;
+    display: flex;
+  }
+  .tab-wrapper button {
+    min-width: 150px;
+  }
+}
+
+/* .nav-pills .nav-item:not(:last-child) {
   margin-right: 0.8rem;
 }
 .nav-pills .nav-link {
@@ -56,4 +56,4 @@
 .nav-pills .nav-link.active {
   background: black !important ;
   color: white !important;
-}
+} */
