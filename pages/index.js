@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import Add from "../components/Add";
 import AddButton from "../components/AddButton";
+import Basket from "../components/Basket";
 import Featured from "../components/Featured";
 import PizzaList from "../components/PizzaList";
 import styles from "../styles/Home.module.css";
@@ -28,7 +29,7 @@ export default function Home({ pizzaList, admin }) {
       </Head>
       <Featured />
       
-  
+      <Basket/>
       <PizzaList pizzaList={pizzaList} />
       {!close && <Add setClose={setClose} />}
     </div>

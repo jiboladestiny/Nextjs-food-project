@@ -1,36 +1,27 @@
 import styles from "../styles/Featured.module.css";
 import Image from "next/image";
-import { useState } from "react";
+import { useRef,useEffect} from "react";
 
 const Featured = () => {
-  const [index, setIndex] = useState(0);
-  const images = [
-    "/img/featured.png",
-    "/img/featured2.png",
-    "/img/featured3.png",
-  ];
+const vidRef = useRef();
 
-  const handleArrow = (direction) =>{
-      if(direction==="l"){
-          setIndex(index !== 0 ? index-1 : 2)
-      }
-      if(direction==="r"){
-          setIndex(index !== 2 ? index+1 : 0)
-      }
-  }
-
+useEffect(() => {
+  vidRef.current.play();
+}, []);
   return (
     <div className="intro">
+      <video
+        src="https://res.cloudinary.com/destiny1233/video/upload/v1667857216/Video_By_Vimeo_oeomik.mp4"
+        className="back-video"
+        ref={vidRef}
+        muted
+        autoPlay
+        loop
+      />
       <div className="content">
-        <h2 className="first-head">
-          Hot, Fresh and Spicy
-        </h2>
-        <h2 className="second-head">
-          Reserved just for you
-        </h2>
-        <button>
-        Order now
-        </button>
+        <h2 className="first-head">Hot and Spicy</h2>
+        <h2 className="second-head mt-3">Reserved just for you</h2>
+        <button>Order now</button>
       </div>
     </div>
   );

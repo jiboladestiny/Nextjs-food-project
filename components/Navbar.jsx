@@ -8,17 +8,15 @@ const Navbar = () => {
     <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
       <div class="container">
         <a class="navbar-brand" href="#">
-          Navbar
+          Foodie
         </a>
 
-      
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">
-              Home
-            </a>
+            <button className="btn direct-order">
+              <i class="bx bxs-phone-call bx-flashing"></i> Direct Order
+            </button>
           </li>
-
         </ul>
       </div>
     </nav>
