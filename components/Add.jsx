@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 const Add = ({ setClose }) => {
   const [file, setFile] = useState(null);
   const [title, setTitle] = useState(null);
+  const [category, setCategory] = useState(null);
   const [desc, setDesc] = useState(null);
   const [prices, setPrices] = useState([]);
   const [extraOptions, setExtraOptions] = useState([]);
@@ -31,7 +32,7 @@ const Add = ({ setClose }) => {
     data.append("upload_preset", "uploads");
     try {
       const uploadRes = await axios.post(
-        "https://api.cloudinary.com/v1_1/dsbyq4sj1/image/upload",
+        "https://api.cloudinary.com/v1_1/destiny1233/image/upload",
         data
       );
 
@@ -39,11 +40,13 @@ const Add = ({ setClose }) => {
       const newProduct = {
         title,
         desc,
+        category,
         prices,
         extraOptions,
         img: url,
       };
 
+      console.log(newProduct)
       await axios.post("http://localhost:3000/api/products", newProduct);
       setClose(true);
     } catch (err) {
@@ -68,6 +71,14 @@ const Add = ({ setClose }) => {
             className={styles.input}
             type="text"
             onChange={(e) => setTitle(e.target.value)}
+          />
+        </div>
+        <div className={styles.item}>
+          <label className={styles.label}>Category</label>
+          <input
+            className={styles.input}
+            type="text"
+            onChange={(e) => setCategory(e.target.value)}
           />
         </div>
         <div className={styles.item}>

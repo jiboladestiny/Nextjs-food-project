@@ -37,7 +37,7 @@ const PizzaList = ({ pizzaList }) => {
         <div className="tab-content-wrapper container">
           {show === 0 && (
             <div className="tab-content">
-              <div className="wrappers row justify-content-center">
+              <div className="wrappers row gy-5 justify-content-center">
                 {pizzaList.map((pizza) => (
                   <PizzaCard key={pizza._id} pizza={pizza} />
                 ))}

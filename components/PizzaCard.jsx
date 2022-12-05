@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const PizzaCard = ({ pizza }) => {
   return (
-    <div className="col-md-3 col-6">
+    <div className="col-md-4 col-6">
       <div className="pizza-container">
         <div className="row align-items-center">
           <div className="col-7">
@@ -17,7 +17,7 @@ const PizzaCard = ({ pizza }) => {
               <p className="pizza-desc">{pizza.desc}</p>
               <span className="pizza-price">
                 <span> ${pizza.prices[0]}</span>{" "}
-                <i class="bx bx-plus-medical"></i>
+                <i className="bx bx-plus-medical"></i>
               </span>
             </div>
           </div>
