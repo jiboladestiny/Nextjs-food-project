@@ -1,21 +1,12 @@
-.containers {
-
-
-}
-
-.left {
-
-}
-
-.right {
-}
-
-.imgContainer {
-  width: 80%;
-  height: 80%;
+.leftcolumn{
   position: relative;
+  background-color: red;
 }
 
+.rightcolumn{
+  position: relative;
+  background-color: red;
+}
 .price {
   color: #d1411e;
   font-size: 24px;

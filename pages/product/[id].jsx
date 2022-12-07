@@ -56,19 +56,23 @@ const Product = ({ pizza }) => {
           rel="stylesheet"
         />
       </Head>
-      <div className="containers row">
-        <div className="left col-md-6">
-          <div className="">
+      <div className="productcontainer row">
+        <div className="col-md-6">
+          <div className="leftcolumn">
+            <Image src={pizza.img} objectFit="contain" alt="" />
+          </div>
+        </div>
+        <div className="col-md-6">
+          <div className="rightcoloumn">
             <Image
               src={pizza.img}
-
-              objectFit="contain"
-              layout="fill"
+              objectFit="cover"
+              width={500}
+              height={500}
               alt=""
             />
           </div>
         </div>
-      
       </div>
     </>
   );
